@@ -1,0 +1,27 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+// Reset
+@import "compass/reset";
+
+// Typography
+@import "compass/typography";
+
+// Typography
+@import "_fullscreen-menu";
+
+
+html, body{
+	min-width: 100%; min-height: 100%; 
+	width:100%; height: 100%; 
+	}
+
+html{
+	background: green;
+}
+
+body{
+	background: yellow;
+}

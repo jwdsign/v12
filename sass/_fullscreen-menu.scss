@@ -1,0 +1,100 @@
+nav[role="navigation"]{
+	
+		background: blue;
+		min-width: 100%; min-height: 100%; 
+		width:100%; height: 100%;
+
+	.nav-toggle{
+		position: absolute;
+		top: 24px; left:24px;		
+		width: 32px;
+		padding: 12.5px 8px;
+		background: #fff;
+		cursor: pointer;
+
+		.hamburger{
+			display: block;
+			width: 100%;
+			height: 5px;
+			background: #333;
+		}
+
+		.middle, .bottom{
+			@extend .hamburger;
+			margin-top: 4px;
+		}
+	}
+
+	.open{
+		@extend .nav-toggle;
+		padding: 21px 8px;
+
+		.top, .middle, .bottom{margin: 0; transform-origin: center center; transform-style: preserve-3d;}
+
+		.top{
+			-moz-transform: scale(1) rotate(45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+			-webkit-transform: scale(1) rotate(45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+			-o-transform: scale(1) rotate(45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+			-ms-transform: scale(1) rotate(45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+			transform: scale(1) rotate(45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+		}
+		.middle{display: none;}
+		.bottom{
+			margin-top: -5px;
+			-moz-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+			-webkit-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+			-o-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+			-ms-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+			transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+		}
+	}
+
+	.fullscreen-menu[data-state="open"]{
+		min-width: 100%; min-height: 100%; 
+		width:100%; height: 100%;
+		background: red;
+		display: table;
+
+		font-size: 2.5em;
+		line-height: 2;
+		text-align: center;
+		
+		ul{
+			display: table-cell;
+			vertical-align: middle;
+
+		}
+
+		li{
+			max-width: 75%;
+			margin: 0 auto;
+			a{text-decoration: none;}
+		}
+
+		.social{
+			display: inline-block;
+			background: #ddd;
+			color: #fff;
+			font-size: 1.5rem;
+			border-radius: 1.25em;
+			line-height: 2.5em;
+			width: 2.5em;
+		}
+
+		.facebook{
+			margin-right: 0.5em;
+			@extend .social;
+		}
+
+		.twitter{
+			margin-left: 0.5em;
+			@extend .social;
+		}
+
+	}
+
+	.fullscreen-menu[data-state="closed"]{
+		display: none;
+	}
+
+}
